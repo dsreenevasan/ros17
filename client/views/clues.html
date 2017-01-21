@@ -1,0 +1,26 @@
+<div data-ng-include="'views/header.html'"></div>
+<div ng-controller="CluesController as ctrl">
+    <ul class="pagination page-clues" ng-if="ctrl.dataLoaded">
+        <li class="waves-effect" ng-class="ctrl.displayQuestion == 0 ? 'disabled' : ''">
+            <a >
+                <i class="material-icons" ng-click="ctrl.seek(0)">chevron_left</i>
+            </a>
+        </li>
+        <li class="waves-effect" ng-repeat="clue in ctrl.clues" ng-class="$index == ctrl.displayQuestion ? 'active' : ''">
+            <a ng-click="ctrl.displayQuestion = $index">
+                {{$index+1}}
+            </a>
+        </li>
+        <li class="waves-effect" ng-class="ctrl.displayQuestion == ctrl.clues.length-1 ? 'disabled' : ''">
+            <a >
+                <i class="material-icons"  ng-click="ctrl.seek(1)">chevron_right</i>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="leaderBoard-clues"  ng-if="ctrl.dataLoaded">
+        <li ng-repeat="clue in ctrl.clues[ctrl.displayQuestion]" style="font-size: large">
+            {{$index+1}}.&nbsp;&nbsp;&nbsp;{{clue}}.
+        </li>
+    </ul>
+</div>

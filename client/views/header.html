@@ -1,0 +1,53 @@
+<div>
+    <header ng-controller="LoginController as ctrl">
+        <nav style="background: teal">
+            <a href="#!" class="brand-logo center"><span class="opensans brandlogo">&nbsp;Riddles Of Sphinx</span></a>
+            <div id="menuIcon" class="col s3"  ng-if="ctrl.loggedIn">
+                <a href="#" data-activates="nav-mobile" class="button-collapse hide-on-large-only valign">
+                    <i class="material-icons valign">menu</i>
+                </a>
+            </div>
+            <ul style="float: right" ng-show="ctrl.loggedIn">
+                <li class="waves-effect waves-light" ng-click="ctrl.logout()"><a href="#" >Logout</a></li>
+            </ul>
+        </nav>
+        <ul id="nav-mobile" class="side-nav fixed go hidden" ng-if="ctrl.loggedIn">
+            <li>
+                <div id="logo-div">
+                    <img id="logo-image" style="margin: 0 auto; display: block" src="../images/user-profile.png"/>
+                    <h6 style="text-align: center">Hi {{ctrl.userDetails.name}}!</h6>
+                </div>
+            </li>
+            <li class="bold hoverable bracket_effect" ng-class="ctrl.currentState == 'main' ? 'active' : ''" ng-click="ctrl.go('main')">
+                <a class="waves-effect waves-red">
+					<span class="valign" style="display:inline;">
+						<i class="material-icons side-nav-icon">turned_in_not</i>
+					</span> <span class="side-nav-text">Play</span>
+                </a>
+            </li>
+            <li class="bold hoverable bracket_effect" ng-click="ctrl.go('clues')" ng-class="ctrl.currentState == 'clues' ? 'active' : ''">
+                <a class="waves-effect waves-green">
+					<span class="valign" style="display:inline;">
+						<i class="material-icons side-nav-icon">info_outline</i>
+					</span><span class="side-nav-text">Clues</span>
+                </a>
+            </li>
+            <li class="bold" ng-click="ctrl.go('leaderBoard')" ng-class="ctrl.currentState == 'leaderBoard' ? 'active' : ''">
+                <a class="waves-effect waves-yellow hoverable bracket_effect">
+					<span class="valign" style="display:inline;">
+						<i class="material-icons side-nav-icon">supervisor_account</i>
+					</span><span class="side-nav-text">Leader Board</span>
+                </a>
+            </li>
+            <li class="bold" ng-class="ctrl.currentState == 'forum' ? 'active' : ''">
+                <a class="waves-effect waves-teal hoverable bracket_effect">
+					<span class="valign" style="display:inline;">
+						<i class="material-icons side-nav-icon">question_answer</i>
+					</span><span class="side-nav-text">Discussion</span>
+                </a>
+            </li>
+        </ul>
+
+    </header>
+    <div ui-view></div>
+</div>

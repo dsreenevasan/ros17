@@ -1,0 +1,24 @@
+<div data-ng-include="'views/header.html'"></div>
+<div ng-controller="LeaderBoardController as ctrl">
+    <table id="LeaderBoardTable" class="striped centered leaderBoard"  ng-if="ctrl.dataLoaded">
+        <thead>
+        <tr>
+            <th data-field="name">Rank</th>
+            <th data-field="category">Name</th>
+            <th data-field="category">Email ID</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr class="hoverable" ng-repeat="users in ctrl.leaderBoard.leaderboard | filter:search:strict">
+            <td>{{$index+1}}</td>
+            <td>{{users[1]}}</td>
+            <td>{{users[0]}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div  class="yourRank"  ng-if="ctrl.dataLoaded">
+        Your Rank is {{ctrl.leaderBoard.yourRank}}!
+    </div>
+</div>

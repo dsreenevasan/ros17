@@ -1,0 +1,17 @@
+{
+  "name": "ROS",
+  "description": "An Online Event in Kurukshetra'17",
+  "main": "app.js",
+  "authors": [
+    "CTF Tech Team"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
