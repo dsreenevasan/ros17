@@ -471,7 +471,7 @@
 
     .leaderBoard{
         width: 65vw !important;
-        margin: 5vh 0 0 29vw !important;
+        margin: 5vh 0 0 18vw !important;
     }
 
     .page-clues{
@@ -486,10 +486,10 @@
 
     .yourRank{
         width: 65vw;
-        margin: 5vh 0 0 29vw;
+        margin: 5vh 0 0 18vw;
         text-align: center;
         font-size: 2em;
-        background: #90caf9;
+        /*background: #90caf9;*/
     }
 
     .user-image{
@@ -502,7 +502,7 @@
 
     .loginForm{
         width: 60vw;
-        margin: 0 0 0 37vw;
+        margin: 0 0 0 39vw;
     }
 
 }

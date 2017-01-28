@@ -1,6 +1,6 @@
 <div data-ng-include="'views/header.html'"></div>
 <div ng-controller="LeaderBoardController as ctrl">
-    <table id="LeaderBoardTable" class="striped centered leaderBoard"  ng-if="ctrl.dataLoaded">
+    <table id="LeaderBoardTable" class="centered leaderBoard"  ng-if="ctrl.dataLoaded">
         <thead>
         <tr>
             <th data-field="name">Rank</th>
@@ -18,7 +18,7 @@
         </tbody>
     </table>
 
-    <div  class="yourRank"  ng-if="ctrl.dataLoaded">
+    <div class="yourRank"  ng-if="ctrl.dataLoaded">
         Your Rank is {{ctrl.leaderBoard.yourRank}}!
     </div>
 </div>

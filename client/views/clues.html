@@ -1,6 +1,6 @@
 <div data-ng-include="'views/header.html'"></div>
 <div ng-controller="CluesController as ctrl">
-    <ul class="pagination page-clues" ng-if="ctrl.dataLoaded">
+    <!--<ul class="pagination page-clues" ng-if="ctrl.dataLoaded">
         <li class="waves-effect" ng-class="ctrl.displayQuestion == 0 ? 'disabled' : ''">
             <a >
                 <i class="material-icons" ng-click="ctrl.seek(0)">chevron_left</i>
@@ -16,7 +16,7 @@
                 <i class="material-icons"  ng-click="ctrl.seek(1)">chevron_right</i>
             </a>
         </li>
-    </ul>
+    </ul>-->
 
     <ul class="leaderBoard-clues"  ng-if="ctrl.dataLoaded">
         <li ng-repeat="clue in ctrl.clues[ctrl.displayQuestion]" style="font-size: large">

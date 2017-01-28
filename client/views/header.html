@@ -1,9 +1,9 @@
 <div>
     <header ng-controller="LoginController as ctrl">
-        <nav style="background: teal">
+        <nav style="background: transparent">
             <a href="#!" class="brand-logo center"><span class="opensans brandlogo">&nbsp;Riddles Of Sphinx</span></a>
             <div id="menuIcon" class="col s3"  ng-if="ctrl.loggedIn">
-                <a href="#" data-activates="nav-mobile" class="button-collapse hide-on-large-only valign">
+                <a href="#" data-activates="nav-mobile" class="button-collapse hide-on-large-only valign" style="display: block !important;">
                     <i class="material-icons valign">menu</i>
                 </a>
             </div>
@@ -11,7 +11,7 @@
                 <li class="waves-effect waves-light" ng-click="ctrl.logout()"><a href="#" >Logout</a></li>
             </ul>
         </nav>
-        <ul id="nav-mobile" class="side-nav fixed go hidden" ng-if="ctrl.loggedIn">
+        <ul id="nav-mobile" class="side-nav" ng-if="ctrl.loggedIn">
             <li>
                 <div id="logo-div">
                     <img id="logo-image" style="margin: 0 auto; display: block" src="../images/user-profile.png"/>
@@ -49,5 +49,5 @@
         </ul>
 
     </header>
-    <div ui-view></div>
+    <div ui-view ></div>
 </div>

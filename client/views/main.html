@@ -1,6 +1,6 @@
 <div data-ng-include="'views/header.html'"></div>
 <div ng-controller="MainController as ctrl">
-    <ul class="pagination page"  ng-if="ctrl.dataLoaded  && ctrl.levels.url.length < 4">
+    <!--<ul class="pagination page"  ng-if="ctrl.dataLoaded  && ctrl.levels.url.length < 4">
         <li class="waves-effect" ng-class="ctrl.displayQuestion == 0 ? 'disabled' : ''">
             <a >
                 <i class="material-icons"  ng-click="ctrl.seek(0)">chevron_left</i>
@@ -16,7 +16,7 @@
                 <i class="material-icons" ng-click="ctrl.seek(1)">chevron_right</i>
             </a>
         </li>
-    </ul>
+    </ul>-->
     <div class="row" style="margin-top: 5vh; align-items: center"  ng-if="ctrl.dataLoaded && ctrl.levels.url.length < 4">
         <div ng-repeat="level in ctrl.levels.url[ctrl.displayQuestion]" class="images-div">
             <img ng-src="{{level}}" class="images">
