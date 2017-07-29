@@ -1,24 +1,43 @@
 <div data-ng-include="'views/header.html'"></div>
-<div ng-controller="LeaderBoardController as ctrl">
-    <table id="LeaderBoardTable" class="centered leaderBoard"  ng-if="ctrl.dataLoaded">
+<div ng-controller="LeaderBoardController as ctrl" style="overflow: auto; width: 100vw; height: 80vh">
+
+    <div class="loading" style="margin-top: 38vh" ng-show="!ctrl.dataLoaded">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+    </div>
+
+    <table id="LeaderBoardTable" class="centered leaderBoard"  ng-if="ctrl.dataLoaded" >
         <thead>
         <tr>
             <th data-field="name">Rank</th>
             <th data-field="category">Name</th>
-            <th data-field="category">Email ID</th>
+            <th data-field="category">Level</th>
+            <th data-field="category">Previous Level Time</th>
         </tr>
         </thead>
 
         <tbody>
-        <tr class="hoverable" ng-repeat="users in ctrl.leaderBoard.leaderboard | filter:search:strict">
+        <tr class="hoverable" ng-repeat="users in ctrl.leaderBoard.leaderboard | filter:search:strict" ng-style="ctrl.leaderBoard.yourRank == $index+1 && {'background': 'teal'}">
             <td>{{$index+1}}</td>
-            <td>{{users[1]}}</td>
             <td>{{users[0]}}</td>
+            <td>{{users[2]}}</td>
+            <td>
+                <span ng-if="users[2] != null">{{ctrl.lastLevelTime[$index]}}</span>
+                <span ng-if="users[2] == null">No levels completed</span>
+            </td>
+        </tr>
+        <tr ng-if="ctrl.leaderBoard.yourRank > 10" style="background: teal">
+            <td>{{ctrl.leaderBoard.yourRank}}</td>
+            <td>{{ctrl.userDetails.name}}</td>
+            <td>{{ctrl.userDetails.level}}</td>
+            <td></td>
         </tr>
         </tbody>
     </table>
 
-    <div class="yourRank"  ng-if="ctrl.dataLoaded">
+    <!--<div class="yourRank"  ng-if="ctrl.dataLoaded">
         Your Rank is {{ctrl.leaderBoard.yourRank}}!
-    </div>
+    </div>-->
 </div>

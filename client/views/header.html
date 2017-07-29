@@ -1,53 +1,219 @@
 <div>
     <header ng-controller="LoginController as ctrl">
-        <nav style="background: transparent">
-            <a href="#!" class="brand-logo center"><span class="opensans brandlogo">&nbsp;Riddles Of Sphinx</span></a>
-            <div id="menuIcon" class="col s3"  ng-if="ctrl.loggedIn">
-                <a href="#" data-activates="nav-mobile" class="button-collapse hide-on-large-only valign" style="display: block !important;">
-                    <i class="material-icons valign">menu</i>
-                </a>
-            </div>
+        <nav style="background: transparent; line-height: 70px">
+            <a ng-click="ctrl.go('main')" class="brand-logo center">
+                <span class="opensans brandlogo title" style="font-family: 'Samarkan Normal';">&nbsp;Riddles Of The Sphinx</span>
+            </a>
+                <div id="menuIcon" class="col s3" style="float: left">
+                    <img style="margin: 0 auto; display: block" src="../images/klogofeb15-18white.png" height="65px" width="200px"/>
+                </div>
             <ul style="float: right" ng-show="ctrl.loggedIn">
                 <li class="waves-effect waves-light" ng-click="ctrl.logout()"><a href="#" >Logout</a></li>
             </ul>
         </nav>
-        <ul id="nav-mobile" class="side-nav" ng-if="ctrl.loggedIn">
+        <!--<ul id="nav-mobile" class="side-nav" ng-if="ctrl.loggedIn">
             <li>
-                <div id="logo-div">
-                    <img id="logo-image" style="margin: 0 auto; display: block" src="../images/user-profile.png"/>
-                    <h6 style="text-align: center">Hi {{ctrl.userDetails.name}}!</h6>
+                <div id="logo-div" style="margin-top: 4vh">
+                    <img id="logo-image" style="margin: 0 auto; display: block" src="../images/boy.png" height="96px" width="96px" ng-if="ctrl.userDetails.gender == 'M'"/>
+                    <img style="margin: 0 auto; display: block" src="../images/girl.png" height="96px" width="96px" ng-if="ctrl.userDetails.gender == 'F'"/>
+                    <h6 style="text-align: center; color: black; font-size: 1.3em !important; margin-top: 3vh !important;">Hi {{ctrl.userDetails.name}}!</h6>
                 </div>
             </li>
-            <li class="bold hoverable bracket_effect" ng-class="ctrl.currentState == 'main' ? 'active' : ''" ng-click="ctrl.go('main')">
+            <div class="divider" style="margin-top: 3vh"></div>
+            <li class="bold hoverable bracket_effect" ng-class="ctrl.currentState == 'main' ? 'active' : ''" ng-click="ctrl.go('main')" style="margin-top: 3vh">
                 <a class="waves-effect waves-red">
 					<span class="valign" style="display:inline;">
 						<i class="material-icons side-nav-icon">turned_in_not</i>
-					</span> <span class="side-nav-text">Play</span>
+					</span> <span class="side-nav-text" style="font-size: 1.2em">Play</span>
                 </a>
             </li>
             <li class="bold hoverable bracket_effect" ng-click="ctrl.go('clues')" ng-class="ctrl.currentState == 'clues' ? 'active' : ''">
                 <a class="waves-effect waves-green">
 					<span class="valign" style="display:inline;">
 						<i class="material-icons side-nav-icon">info_outline</i>
-					</span><span class="side-nav-text">Clues</span>
+					</span><span class="side-nav-text" style="font-size: 1.2em">Clues</span>
                 </a>
             </li>
-            <li class="bold" ng-click="ctrl.go('leaderBoard')" ng-class="ctrl.currentState == 'leaderBoard' ? 'active' : ''">
+            <li class="bold" ng-click="ctrl.go('hallOfFame')" ng-class="ctrl.currentState == 'hallOfFame' ? 'active' : ''">
                 <a class="waves-effect waves-yellow hoverable bracket_effect">
 					<span class="valign" style="display:inline;">
 						<i class="material-icons side-nav-icon">supervisor_account</i>
-					</span><span class="side-nav-text">Leader Board</span>
+					</span><span class="side-nav-text" style="font-size: 1.2em">Hall Of Fame</span>
                 </a>
             </li>
-            <li class="bold" ng-class="ctrl.currentState == 'forum' ? 'active' : ''">
+            <li class="bold" ng-click="ctrl.go('rules')" ng-class="ctrl.currentState == 'rules' ? 'active' : ''">
                 <a class="waves-effect waves-teal hoverable bracket_effect">
 					<span class="valign" style="display:inline;">
-						<i class="material-icons side-nav-icon">question_answer</i>
-					</span><span class="side-nav-text">Discussion</span>
+						<i class="material-icons side-nav-icon">gavel</i>
+					</span><span class="side-nav-text" style="font-size: 1.2em">rules</span>
                 </a>
             </li>
-        </ul>
+            <li>
+                <div class="logo">
+                    <img style="margin: 0 auto; display: block" src="../images/klogofeb15-18-1.jpg" height="96px" width="200px"/>
+                </div>
+            </li>
+        </ul>-->
+        <div class="row" ng-if="ctrl.currentState != 'login'">
+            <div class="col s12">
+                <ul tabs reload="allTabContentLoaded" style="background: transparent; overflow: hidden">
+                    <li class="tab col s2"><a class="tab-color-white" ng-class="ctrl.currentState == 'main' ? 'active' : ''" ng-click="ctrl.go('main')">Play</a></li>
+                    <li class="tab col s2"><a class="tab-color-white" ng-class="ctrl.currentState == 'clues' ? 'active' : ''" ng-click="ctrl.go('clues')">Clues</a></li>
+                    <li class="tab col s2"><a class="tab-color-white" ng-class="ctrl.currentState == 'hallOfFame' ? 'active' : ''" ng-click="ctrl.go('hallOfFame')">Hall Of Fame</a></li>
+                    <li class="tab col s2"><a class="tab-color-white" ng-class="ctrl.currentState == 'rules' ? 'active' : ''" ng-click="ctrl.go('rules')">Rules</a></li>
+                    <li class="tab col s2"><a class="tab-color-white" ng-class="ctrl.currentState == 'contact' ? 'active' : ''" ng-click="ctrl.go('contact')">Contact</a></li>
+                    <li class="tab col s2"><a class="tab-color-white" ng-class="ctrl.currentState == 'forum' ? 'active' : ''" ng-click="ctrl.share()">Forum</a></li>
+                </ul>
+            </div>
+        </div>
 
     </header>
     <div ui-view ></div>
+
+    <div id="dummy1" modal href="#ad1" style="display: none"> </div>
+    <div id="dummy2" modal href="#ad2" style="display: none"> </div>
+    <div id="dummy3" modal href="#ad3" style="display: none"> </div>
+    <div id="dummy4" modal href="#ad4" style="display: none"> </div>
+    <div id="dummy5" modal href="#ad5" style="display: none"> </div>
+    <div id="dummy6" modal href="#ad6" style="display: none"> </div>
+    <div id="dummy7" modal href="#ad7" style="display: none"> </div>
+    <div id="dummy8" modal href="#ad8" style="display: none"> </div>
+    <div id="dummy9" modal href="#ad9" style="display: none"> </div>
+    <div id="dummy10" modal href="#ad10" style="display: none"> </div>
+    <div id="dummy11" modal href="#ad11" style="display: none"> </div>
+    <div id="dummy12" modal href="#ad12" style="display: none"> </div>
+
+    <!--<div id="adModal" class="modal modal-fixed-footer" style="background: #212121; color: white">
+        <img style="margin: 0 auto; display: block" src="../images/klogofeb15-18-1.jpg" height="65px" width="200px"/>
+    </div>-->
+
+    <div id="ad1" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster1.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad2" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster2.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad3" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster3.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad4" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster4.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad5" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/../images/Posters/poster5.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad6" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster6.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div id="ad7" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster7.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad8" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster8.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad9" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster9.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad10" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster10.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad11" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/../images/Posters/poster11.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="ad12" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 58vh">
+        <div class="modal-content">
+            <img style="margin: 0 auto; display: block" src="../images/Posters/poster12.jpg" height="300vh" width="400vw"/>
+        </div>
+        <div class="modal-footer">
+            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
 </div>
+
+<script>
+    !function() {
+        var t;
+        if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+                t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+                t.factory = function(e) {
+                    return function() {
+                        var n;
+                        return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+        }), t.load = function(t) {
+            var e, n, o, i;
+            e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+                    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+        });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('5r52b656mkx3');
+</script>

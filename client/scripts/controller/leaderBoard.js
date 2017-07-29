@@ -34,7 +34,15 @@
             ROSService.GetLeaderBoard(obj).then(function(response){
                 if(response.status == 200){
                     ctrl.leaderBoard = response.data;
-                    console.log(JSON.stringify(ctrl.leaderBoard));
+                    console.log(JSON.stringify(ctrl.leaderBoard.leaderboard));
+                    var date;
+                    ctrl.lastLevelTime = [];
+                    angular.forEach(ctrl.leaderBoard.leaderboard, function(value, key){
+                        date = new Date(ctrl.leaderBoard.leaderboard[key][1]);
+                        console.log(date.getDate() + "/" + parseInt(date.getMonth()+1) + " - " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
+                        ctrl.lastLevelTime[key] = date.getDate() + "/" + parseInt(date.getMonth()+1) + " - " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+                    });
+                    console.log(ctrl.lastLevelTime);
                     ctrl.dataLoaded = true;
                 }
                 else{

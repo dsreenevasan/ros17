@@ -1,18 +1,220 @@
-<nav>
-    <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Logo</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-        </ul>
+<div data-ng-include="'views/header.html'"></div>
+<div style="overflow: auto; height: 80vh; margin: 0 0 0 30vw" ng-controller="LoginController as ctrl">
+
+    <div ng-if="ctrl.userDetails.level == 0">
+        <!--<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116258775558873%26id%3D100015242523804&width=500" width="178" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116258775558873&id=100015242523804&__mref=message_bubble" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>-->
+        <div class="center-align">
+            <h4>No forum for this level.</h4>
+        </div>
     </div>
-</nav>
+    <div ng-if="ctrl.userDetails.level == 1">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116276088890475%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116276088890475&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 2">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116277488890335%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116277488890335&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 3">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116278658890218%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116278658890218&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 4">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116279035556847%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116279035556847&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 5">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116280025556748%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116280025556748&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 6">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116284112223006%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116284112223006&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 7">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116623085522442%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116623085522442&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 8">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116626018855482%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116626018855482&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 9">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116626268855457%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116626268855457&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 10">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116626508855433%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116626508855433&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 11">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116626622188755%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116626622188755&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 12">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116626768855407%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116626768855407&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 13">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116627608855323%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116627608855323&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 14">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116628522188565%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116628522188565&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 15">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116634192187998%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116634192187998&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 16">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116635598854524%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116635598854524&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 17">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D116635742187843%26id%3D100015242523804&width=500" width="500" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/permalink.php?story_fbid=116635742187843&amp;id=100015242523804" data-numposts="5"></div>
+    </div>
+
+   <!-- <div ng-if="ctrl.userDetails.level == 18">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdurai.sreenevasan%2Fposts%2F1277004972352142&width=500" width="500" height="178" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 19">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdurai.sreenevasan%2Fposts%2F1277004972352142&width=500" width="500" height="178" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 20">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdurai.sreenevasan%2Fposts%2F1277004972352142&width=500" width="500" height="178" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 21">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdurai.sreenevasan%2Fposts%2F1277004972352142&width=500" width="500" height="178" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 22">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdurai.sreenevasan%2Fposts%2F1277004972352142&width=500" width="500" height="178" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 23">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdurai.sreenevasan%2Fposts%2F1277004972352142&width=500" width="500" height="178" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 24">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdurai.sreenevasan%2Fposts%2F1277004972352142&width=500" width="500" height="178" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <div ng-if="ctrl.userDetails.level == 25">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fdurai.sreenevasan%2Fposts%2F1277004972352142&width=500" width="500" height="178" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br>
+
+        <div class="fb-comments" data-href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" data-width="500" data-show-text="true">
+            <blockquote cite="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142" class="fb-xfbml-parse-ignore">
+                <p>Thank you everyone for ur blessings and wishes.</p>Posted by <a href="https://www.facebook.com/durai.sreenevasan">Durai Sreenevasan</a>
+                on&nbsp;<a href="https://www.facebook.com/durai.sreenevasan/posts/1277004972352142">Friday, October 21, 2016</a>
+            </blockquote>
+        </div>
+    </div>-->
+
+
+</div>

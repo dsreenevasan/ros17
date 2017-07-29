@@ -1,0 +1,49 @@
+<div data-ng-include="'views/header.html'"></div>
+<div ng-controller="AddOnController as ctrl">
+    <div class="row" style="align-items: center; margin-top: 5vh"  ng-if="ctrl.dataLoaded && ctrl.userDetails.level == 18">
+        <!--<img ng-src="{{level}}" class="images">-->
+        <div carousel style="height: 50vh;" class="carousel-div">
+            <a ng-repeat="level in ctrl.levels.url[0]" class="carousel-item" href="javascript:void(0);" style="width: 40vh;"><img ng-src="{{level}}" class="images"></a>
+        </div>
+
+        <div class="input-field col s6 answer-box">
+            <i class="material-icons prefix">mode_edit</i>
+            <input id="icon_prefix" ng-model="ctrl.answer" type="text" class="validate" ng-keydown="ctrl.clickSubmit($event)">
+            <label for="icon_prefix">Answer</label>
+        </div>
+
+        <a class="waves-effect waves-light btn col s4 offset-s4 l2 offset-l1 apply-button teal darken-3"
+           ng-if="!ctrl.isSubmitting" ng-click="ctrl.submitAddOn()">Submit</a>
+
+        <div class="loading" style="margin: 50vh 0 0 20vw" ng-show="ctrl.isSubmitting">
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <div class="no-image" style="margin-top: 5vh; align-items: center" ng-if="ctrl.userDetails.level > 18">
+        You have successfully completed this Level! <br>Keep Playing :-)
+    </div>
+
+    <div class="no-image" style="margin-top: 5vh;" ng-if="ctrl.userDetails.level < 18">
+        You haven't reached this level yet. Complete previous levels!
+    </div>
+
+    <div id="wrong" modal href="#wrongModal" style="display: none"> </div>
+
+    <div id="wrongModal" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 60vh">
+        <div data-ng-include="'views/wrongModal.html'"></div>
+    </div>
+
+    <div id="right" modal href="#rightModal" style="display: none"> </div>
+
+    <div id="rightModal" class="modal modal-fixed-footer" style="color: black; width: 50vw; height: 60vh">
+        <div data-ng-include="'views/rightModal.html'"></div>
+    </div>
+
+    <div id="skipLevel" class="modal" style="color: black">
+        <div data-ng-include="'views/skipLevelModal.html'"></div>
+    </div>
+</div>

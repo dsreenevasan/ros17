@@ -17,9 +17,10 @@
             </a>
         </li>
     </ul>-->
-    <div class="row" style="margin-top: 5vh; align-items: center"  ng-if="ctrl.dataLoaded && ctrl.levels.url.length < 4">
-        <div ng-repeat="level in ctrl.levels.url[ctrl.displayQuestion]" class="images-div">
-            <img ng-src="{{level}}" class="images">
+    <div class="row" style="align-items: center; margin-top: 5vh"  ng-if="ctrl.dataLoaded && ctrl.levels.url.length < 4">
+        <!--<img ng-src="{{level}}" class="images">-->
+        <div carousel style="height: 50vh;" class="carousel-div">
+            <a ng-repeat="level in ctrl.levels.url[ctrl.displayQuestion]" class="carousel-item" href="javascript:void(0);" style="width: 40vh;"><img ng-src="{{level}}" class="images"></a>
         </div>
 
         <div class="input-field col s6 answer-box" ng-if="ctrl.displayQuestion == ctrl.levels.url.length-1">

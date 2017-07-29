@@ -33,9 +33,9 @@
 
             ROSService.GetClues(obj).then(function(response){
                 if(response.status == 200){
-                    ctrl.clues = response.data;
+                    ctrl.clues = response.data.clue;
                     console.log(JSON.stringify(ctrl.clues));
-                    ctrl.displayQuestion = ctrl.clues.length-1;
+                    //ctrl.displayQuestion = ctrl.clues.length-1;
                     ctrl.dataLoaded = true;
                 }
                 else{
@@ -44,7 +44,7 @@
             })
         }
 
-        ctrl.seek = function(operation){
+        /*ctrl.seek = function(operation){
             if(operation == 1){
                 if(ctrl.displayQuestion < ctrl.clues.length-1){
                     ctrl.displayQuestion += 1;
@@ -55,7 +55,7 @@
                     ctrl.displayQuestion -= 1;
                 }
             }
-        }
+        }*/
 
     }
 

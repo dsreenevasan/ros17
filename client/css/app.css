@@ -311,17 +311,17 @@
     .apply-button{
         font-size: 0.7em;
         width: 15vw !important;
-        margin: 20vh 0 0 2vw !important;
+        margin: 5vh 0 0 2vw !important;
     }
 
     .answer-box{
-        margin: 20vh 0 0 10vw !important;
+        margin: 5vh 0 0 10vw !important;
         width: 55vw !important;
         float: left;
     }
 
     .images{
-        height: 20vh;
+        height: 40vh;
         width: 25vw;
         margin: 3vh 0 0 3vw;
         float: left;
@@ -356,7 +356,7 @@
         margin: 5vh 0 0 10vw;
         text-align: center;
         font-size: 2em;
-        background: #90caf9;
+        /*background: #90caf9;*/
     }
 
     .user-image{
@@ -370,6 +370,27 @@
     .loginForm{
         width: 60vw;
         margin: 0 0 0 30vw;
+    }
+
+    .forgotPassword{
+        margin: 0 0 0 30vw;
+    }
+
+    .register-here{
+        margin: 0 0 0 10vw;
+    }
+
+    .carousel-div{
+        margin-left: -1vw;
+    }
+
+    .no-image{
+        margin: 15vh 0 0 17vw !important;
+        font-size: 2em;
+    }
+
+    .title{
+        font-size: 0.9em;
     }
 }
 
@@ -377,17 +398,17 @@
     .apply-button{
         font-size: 1em;
         width: 10vw !important;
-        margin: 20vh 0 0 2vw !important;
+        margin: 10vh 0 0 2vw !important;
     }
 
     .answer-box{
-        margin: 20vh 0 0 10vw !important;
-        width: 55vw !important;
+        margin: 10vh 0 0 23vw !important;
+        width: 40vw !important;
         float: left;
     }
 
     .images{
-        height: 30vh;
+        height: 35vh;
         width: 25vw;
         margin: 3vh 0 0 3vw;
         float: left;
@@ -422,7 +443,7 @@
         margin: 5vh 0 0 10vw;
         text-align: center;
         font-size: 2em;
-        background: #90caf9;
+        /*background: #90caf9;*/
     }
 
     .user-image{
@@ -436,6 +457,26 @@
     .loginForm{
         width: 60vw;
         margin: 0 0 0 30vw;
+    }
+
+    .forgotPassword{
+        margin: 0 0 0 30vw;
+    }
+
+    .register-here{
+        margin: 0 0 0 22vw;
+    }
+    .carousel-div{
+        margin-left: -2vw;
+    }
+
+    .no-image{
+        margin: 18vh 0 0 17vw !important;
+        font-size: 2em;
+    }
+
+    .title{
+        font-size: 1.3em;
     }
 }
 
@@ -444,17 +485,17 @@
     .apply-button{
         font-size: 1em;
         width: 10vw !important;
-        margin: 20vh 0 0 2vw !important;
+        margin: 10vh 0 0 2vw !important;
     }
 
     .answer-box{
-        margin: 20vh 0 0 32vw !important;
+        margin: 10vh 0 0 27vw !important;
         width: 33vw !important;
         float: left;
     }
 
     .images{
-        height: 30vh;
+        height: 35vh;
         width: 20vw;
         margin: 3vh 0 0 3vw;
         float: left;
@@ -480,8 +521,8 @@
     }
 
     .leaderBoard-clues{
-        width: 65vw !important;
-        margin: 5vh 0 0 32vw !important;
+        width: 55vw !important;
+        margin: 15vh 0 0 22vw !important;
     }
 
     .yourRank{
@@ -505,5 +546,59 @@
         margin: 0 0 0 39vw;
     }
 
+    .forgotPassword{
+        margin: 0 0 0 39vw;
+    }
+
+    .register-here{
+        margin: 0 0 0 5vw;
+    }
+
+    .carousel-div{
+        margin-left: -2vw;
+    }
+
+    .no-image{
+        margin: 20vh 0 0 21vw !important;
+        font-size: 2em;
+    }
+
+    .title{
+        font-size: 1.5em;
+    }
+
+}
+
+@media (min-height: 680px){
+    .logo{
+        margin-top: 25vh;
+    }
+}
+
+@media (max-height: 679px){
+    .logo{
+        margin-top: 15vh;
+    }
+}
+
+.tab-color-white {
+    color: white !important;
+    cursor: pointer;
+}
+
+
+@font-face {
+    font-family: 'Samarkan Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Samarkan Normal'), url('../font/SAMARN__.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Samarkan Oblique';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Samarkan Oblique'), url('../font/SAMARO__.woff') format('woff');
 }
 

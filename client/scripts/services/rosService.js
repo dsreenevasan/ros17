@@ -16,6 +16,11 @@
         service.CheckAnswer = CheckAnswer;
         service.GetLeaderBoard = GetLeaderBoard;
         service.GetClues = GetClues;
+        service.GetDownloadableClues = GetDownloadableClues;
+        service.GetPreviousLevelAccess = GetPreviousLevelAccess;
+        service.CheckAddOnAnswer = CheckAddOnAnswer;
+        service.GetLifeLine = GetLifeLine;
+        service.GetAddOn = GetAddOn;
 
         return service;
 
@@ -37,6 +42,26 @@
 
         function GetClues(params){
             return $http.post(ConfigService.BaseURI() + '/api/getClues', params).then(handleSuccess, handleRemoteError);
+        }
+
+        function GetDownloadableClues(params){
+            return $http.post(ConfigService.BaseURI() + '/api/download', params).then(handleSuccess, handleRemoteError);
+        }
+
+        function GetPreviousLevelAccess(params){
+            return $http.post(ConfigService.BaseURI() + '/api/getPreviousLevel', params).then(handleSuccess, handleRemoteError);
+        }
+
+        function CheckAddOnAnswer(params){
+            return $http.post(ConfigService.BaseURI() + '/api/submitAddOn', params).then(handleSuccess, handleRemoteError);
+        }
+
+        function GetLifeLine(params){
+            return $http.post(ConfigService.BaseURI() + '/api/lifeline', params).then(handleSuccess, handleRemoteError);
+        }
+
+        function GetAddOn(params){
+            return $http.post(ConfigService.BaseURI() + '/api/addOn', params).then(handleSuccess, handleRemoteError);
         }
 
         function handleRemoteError(data) {
